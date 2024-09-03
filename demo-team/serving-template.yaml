@@ -1,0 +1,40 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: ServingTemplate
+metadata:
+  name: demo-team-executable-id
+  annotations:
+    scenarios.ai.sap.com/description: "demo team sample ml service for anomaly detection"
+    scenarios.ai.sap.com/name: "demo-anomaly-detection-scenario"
+    executables.ai.sap.com/description: "demo anomaly detection service using PyNomaly"
+    executables.ai.sap.com/name: "demo-anomaly-detection-executable"
+  labels:
+    scenarios.ai.sap.com/id: "demo-anomaly-detection-scenario"
+    ai.sap.com/version: "1.0.0"
+spec:
+  inputs:
+    parameters: 
+       - name: modelName
+         type: string
+         description: description of the parameter
+  template:
+    apiVersion: "serving.kserve.io/v1beta1"
+    metadata:
+      annotations: |
+        autoscaling.knative.dev/metric: concurrency
+        autoscaling.knative.dev/target: 1
+        autoscaling.knative.dev/targetBurstCapacity: 0
+      labels: |
+        ai.sap.com/resourcePlan: starter
+    spec: |
+      predictor:
+        minReplicas: 0
+        maxReplicas: 5
+        containers:
+        - name: kserve-container
+      image: snackinator/hackathon-demo:latest
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          env:
+            - name: MODEL_NAME
+              value: "{{inputs.parameters.modelName}}"
