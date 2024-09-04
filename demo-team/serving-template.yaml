@@ -4,11 +4,11 @@ metadata:
   name: demo-team-executable-id
   annotations:
     scenarios.ai.sap.com/description: "demo team sample ml service for anomaly detection"
-    scenarios.ai.sap.com/name: "demo-anomaly-detection-scenario"
+    scenarios.ai.sap.com/name: "demo-anomaly-detection-scenario-name"
     executables.ai.sap.com/description: "demo anomaly detection service using PyNomaly"
     executables.ai.sap.com/name: "demo-anomaly-detection-executable"
   labels:
-    scenarios.ai.sap.com/id: "demo-anomaly-detection-scenario"
+    scenarios.ai.sap.com/id: "demo-anomaly-detection-scenario-id"
     ai.sap.com/version: "1.0.0"
 spec:
   inputs:
