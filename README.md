@@ -5,10 +5,11 @@ We already provide a working demo serving-template in the `demo-team` folder. Fe
 1. We use [Bruno](https://www.usebruno.com/) as the API Client to communicate with SAP AI Core. 
 2. You should have [Python](https://www.python.org/downloads/) installed
 3. We provide a Bruno Collection and a partially preconfigured Bruno environment file for you to access AI Core
-4. You should have [Docker]() installed.
+4. You should have [Docker](https://www.docker.com/) installed.
 5. At least one person in your team should have a [DockerHub](https://hub.docker.com/) account
 6. You will train your ML Models locally on your own machine
 7. Follow the guide in this README and in the following example repository: https://github.com/ironedr/hackathon-demo
+8. In Bruno, if you see text in 2 Curly Braces (e.g. `{{configuration_id}}`) do not change or delet it. This value will be filled out automatically when you execute a request.
 
 ## How to Authenticate to the SAP AI-Core API:
 1. Set the client-id and client-secret in the hackathon bruno environment (if not already set)
