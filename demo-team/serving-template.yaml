@@ -32,6 +32,7 @@ spec:
         containers:
         - name: kserve-container
           image: snackinator/hackathon-demo:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
               protocol: TCP
