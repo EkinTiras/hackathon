@@ -12,8 +12,8 @@ metadata:
     ai.sap.com/version: "1.0.0"
 spec:
   inputs:
-    parameters: 
-       - name: modelName
+    parameters:
+       - name: model_name
          type: string
          description: description of the parameter
   template:
@@ -37,4 +37,4 @@ spec:
               protocol: TCP
           env:
             - name: MODEL_NAME
-              value: "{{inputs.parameters.modelName}}"
+              value: "{{inputs.parameters.model_name}}"
