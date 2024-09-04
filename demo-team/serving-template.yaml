@@ -31,7 +31,7 @@ spec:
         maxReplicas: 5
         containers:
         - name: kserve-container
-      image: snackinator/hackathon-demo:latest
+          image: snackinator/hackathon-demo:latest
           ports:
             - containerPort: 5000
               protocol: TCP
