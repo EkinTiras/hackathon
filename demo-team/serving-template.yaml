@@ -12,7 +12,7 @@ metadata:
     ai.sap.com/version: "1.0.0"
 spec:
   inputs:
-    parameters: 
+    parameters:
        - name: model_name
          type: string
          description: description of the parameter
