@@ -13,7 +13,7 @@ metadata:
 spec:
   inputs:
     parameters: 
-       - name: modelName
+       - name: model_name
          type: string
          description: description of the parameter
   template:
@@ -37,4 +37,4 @@ spec:
               protocol: TCP
           env:
             - name: MODEL_NAME
-              value: "{{inputs.parameters.modelName}}"
+              value: "{{inputs.parameters.model_name}}"
