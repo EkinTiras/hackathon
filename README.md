@@ -12,8 +12,13 @@ We already provide a working demo serving-template in the `demo-team` folder. Fe
 8. In Bruno, if you see text in 2 Curly Braces (e.g. `{{configuration_id}}`) do not change or delet it. This value will be filled out automatically when you execute a request.
 
 ## How to Authenticate to the SAP AI-Core API:
-1. Set the client-id and client-secret in the hackathon bruno environment (if not already set)
-2. Use the "Authenticate" POST request in the bruno collection
+1. Import the bruno collection into Bruno.
+2. Click on the 3 dots `...` next to the Collection Name `AI-Core_participants` and select settings
+3. In the collection settings go the `Auth` Tab and select `Basic Auth`
+4. For the username field enter the value `{{client_id}}` and use `{{client_secret}}`for the password field
+5. In the upper right corner where you see `No Environment`, click on the Dropdown box and select `aicore_hackathon`
+6. Now click on the same dropdown again an select `Configure`. In here, Set the correct values for the fields client-id and client-secret in the hackathon bruno environment (if not already set)
+7. Use the "Authenticate" POST request in the bruno collection
 
 ## How to develop the ML Services:
 1. There will be 2 GitHub repositories: a) the repository containing the ml source code that the team creates. b) our hackathon repository where they provide the serving-template for their own ml-service
